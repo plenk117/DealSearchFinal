@@ -1,0 +1,64 @@
+extends layout
+
+block content
+  h1= title
+
+
+  section.get
+    h3 Recent Searches
+    div.data
+      for item in items
+        article.item
+        table.table
+          thead
+            //- tr
+            //-   th Title
+            //-   th Content
+            //-   th Author
+            //-   th ID
+          tbody
+            tr
+              th(scope='row-fluid')
+              td #{item.title}
+              td 
+                a(href="deletebtn/#{item._id}") DELETE
+            tr
+              th(scope='row-fluid')
+              td #{item.content}
+              td 
+                a(href="deletebtn/#{item._id}") DELETE
+            tr
+              th(scope='row-fluid')
+              td #{item.author}
+              td 
+                a(href="deletebtn/#{item._id}") DELETE
+            tr
+              th(scope='row-fluid')
+              td #{item._id}
+              td 
+                a(href="deletebtn/#{item._id}") DELETE
+            
+            
+        //-     table.table
+        //- thead
+        //-   tr
+        //-     th #
+        //-     th First Name
+        //-     th Last Name
+        //-     th Username
+        //- tbody
+        //-   tr
+        //-     th(scope='row') 1
+        //-     td Mark
+        //-     td Otto
+        //-     td @mdo
+        //-   tr
+        //-     th(scope='row') 2
+        //-     td Jacob
+        //-     td Thornton
+        //-     td @fat
+        //-   tr
+        //-     th(scope='row') 3
+        //-     td Larry
+        //-     td the Bird
+        //-     td @twitter

@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  h1= title
+  .container(ng-app='demo')
+    .row(ng-controller='controller')
+      .col-md-4
+        section.insert
+          h3 Search
+          form(action="/insert/", method="post")
+          
+            div.input1
+              label.title1(for="title") Enter Zip Code
+              br
+              input(type="text", id="title", name="title")
+            div.input1
+              label.content1(for="title") Percentage Off
+              br
+              input(type="text", id="content", name="content")
+              br
+              label.normalSearch Normal Search
+              input#chkEggs(type='checkbox', value='greenEggs')
+            div.input1
+              label.author1(for="title") Item Name
+              br
+              input(type="text", id="author", name="author")
+            br
+            #button.btn.btn-default(type="submit" ng-click='setTab(4)' onclick='myFuction()') Search
+      //- .col-lg-8
+      //-   //- div.products(ng-show='isSet(4)')
+      //-   //-   h2 VIZIO D50u-D1 50" Class 4K Ultra HD 2160p 120Hz LED Smart HDTV
+      //-   //-     img.vizio(src='images/viziotv.jpeg')
+      //-   //-   .col-md-4
+      //-   //-     ul.stores
+      //-   //-       li
+      //-   //-         img.walmart(src='images/walmart.png')
+      //-   //-         h4 $528.00
+      //-   //-       li
+      //-   //-         img.target(src='images/target.png')
+      //-   //-         h4 $449.99
+   
+      .container
+        .row
+          .col-md-7
+            div.products(ng-show='isSet(4)')
+              #loader.loader
+              #myDiv.animate-bottom
+                h1.productTitle VIZIO D50u-D1 50" Class 4K Ultra HD 2160p 120Hz LED Smart HDTV
+                img.vizio(src='images/viziotv.jpeg')
+                .row(class='height=100%')
+                  .col-sm-4
+                    .center-block
+                    a(href='https://www.walmart.com/ip/VIZIO-D50u-D1-50-Class-4K-Ultra-HD-2160p-120Hz-LED-Smart-HDTV-4K-x-2K/46819834')
+                      img.img-responsive.walmart(src='images/walmart.png', height='auto', width='100%')
+                    h2.walmartprice $528.00
+                    a(href='http://brickseek.com/walmart-inventory-checker?sku=46819834')
+                      img.img-responsive.brickseek1(src='images/brickseek.png' height='auto' width='50%')
+                      //- a.btn.btn-primary(href='#', role='button') Purchase Now
+                  .col-sm-4
+                    .center-block
+                    a(href='http://www.target.com/p/-/A-50651255')
+                      img.img-responsive.target(src='images/target.png', height='auto', width='100%')
+                    h2.targetprice $449.99
+                    a(href='http://brickseek.com/target-inventory-checker?sku=008-09-1511')
+                      img.img-responsive.brickseek(src='images/brickseek.png' height='auto' width='50%')
+                      //- a.btn.btn-primary(href='#', role='button') Purchase Now
+                  .col-sm-4
+                    .center-block
+                    a(href='http://www.staples.com/VIZIO-D-Series-D50U-D1-50-2160p-Class-Full-Array-Smart-LED-LCD-TV-Black/product_IM11Q0983')
+                      img.img-responsive.staples(src='images/staples.png', height='auto', width='100%')
+                    h2.staplesprice $536.99
+                    a(href='http://brickseek.com/inventory-check/staples/')
+                      img.img-responsive.brickseek(src='images/brickseek.png' height='auto' width='50%')
+                      //- a.btn.btn-primary(href='#', role='button') Purchase Now          
+                  
+                  
+        
+            
+            
+          
+          
